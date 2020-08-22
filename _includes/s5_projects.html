@@ -1,8 +1,7 @@
 <section id="main-project" class="section-4">
-    <div class="container text-center">
-        <h1 class="section-title">Personal projects</h1>
-        <p class="text-secondary">There is no place like 127.0.0.1.</p>
-    </div>
+
+    <h1 class="section-title">Personal projects</h1>
+
     <div class="container cards">
         <div class="d-flex flex-md-row flex-wrap justify-content-center">
 
@@ -13,9 +12,9 @@
                         <h4 class="card-title">{{ project.name }}</h4>
                         <p class="card-text">{{ project.content | markdownify }}</p>
                         <div class="tags">
-                                {% for tag in project.tags %}
+                            {% for tag in project.tags %}
                                 <div class="tag">{{ tag  }}</div>
-                                {% endfor %}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="card-body">

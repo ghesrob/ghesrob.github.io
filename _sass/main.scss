@@ -2,7 +2,6 @@
 :root {
     --Snigle-font: "sniglet", cursive;
     --Rubik: "Rubik", cursive;
-    /*--background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);*/
     --background: #100e17;
     --gradientl: linear-gradient(to left, #ff8a00, #e52e71 60%);
     --gradientr: linear-gradient(to right, #ff8a00, #e52e71 60%);
@@ -460,10 +459,6 @@ header .chevron-down i {
 
 .section-4 .container {
     padding-top: 6vmin;
-}
-
-.section-4 .container .secondary-text {
-    font-size: 3vmin;
 }
 
 .section-4 .card {

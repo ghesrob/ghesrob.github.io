@@ -70,7 +70,7 @@ var TxtType = function(el, toRotate, period) {
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
         var that = this;
-        var delta = 200 - Math.random() * 100;
+        var delta = 150 - Math.random() * 50; // Vitesse d'écriture
 
         if (this.isDeleting) { delta /= 2; }
 
@@ -80,7 +80,7 @@ var TxtType = function(el, toRotate, period) {
         } else if (this.isDeleting && this.txt === '') {
         this.isDeleting = false;
         this.loopNum++;
-        delta = 500;
+        delta = 300; // Délai entre deux phrases
         }
 
         setTimeout(function() {

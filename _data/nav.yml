@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: About
+  link: /#main-about
+- name: Work
+  link: /#main-project
+- name: Contact
+  link: /#main-contact
+- name: Resume
+  link: /assets/img/profile.pdf
