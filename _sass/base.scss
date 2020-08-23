@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet&display=swap');
+
+:root {
+    --Snigle-font: "sniglet", cursive;
+    --Rubik: "Rubik", cursive;
+    --background: #100e17;
+    --gradientl: linear-gradient(to left, #ff8a00, #e52e71 60%);
+    --gradientr: linear-gradient(to right, #ff8a00, #e52e71 60%);
+    --gradientbtn: linear-gradient(to left, #ff8a00, #e52e71, #ff8a00);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--Rubik);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    background-color: var(--background);
+    border-left: 1px solid #252525;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-image: linear-gradient(#ff8a00, #e52e71);
+    outline: 1px solid #666;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25)
+}
+
+
+/* Section title */
+.section-title {
+    padding: 20px 0px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 3px;
+    background-image: var(--gradientr);
+    bottom: 0;
+    left: calc(50% - 45px);
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 18px;
+    background-image: linear-gradient(135deg, #ff8a00, #e52e71);
+    border: 4px solid var(--background);
+    bottom: -8px;
+    left: calc(50% - 12px);
+}
+
+
+/* --------------------------------------------- 
+-------------- Zone header  --------------------
+-----------------------------------------------*/
+
+header{
+    background: var(--background);
+    height: 100vh;
+}
+
+header, section {
+    overflow-x: hidden;
+}
+
+header a {
+    font-family: var(--Snigle-font);
+    font-size: 0.9em;
+    color: whitesmoke;
+}
+
+
+/* Header navbar */
+
+header .p-0 {
+    position: relative;
+}
+
+header .p-0::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-image: var(--gradientl);
+}
+
+header .nav-item {
+    padding: 1em;
+}
+
+header .nav-item:last-child {
+    padding-right: 10.5em;
+}
+
+header .nav-link {
+    font-size: 1.1em;
+}
+
+header .navbar-brand {
+    padding-left: 8rem;
+    font-size: 1.8em;
+}
+
+header .navbar-brand:hover {
+    color: white;
+}
+
+header .brand-wrap:hover,
+header .nav-link:hover {
+    background-image: var(--gradientr);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+
+/* Header content */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ZONE DE CHANTIER POUR L'AVATAR */
+#home-page {
+    border: 1px solid white;
+}
+
+header .row .col-md-5 {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+header .row .col-md-7 {
+    color: whitesmoke;
+}
+
+#home-page .row {
+    border: 1px solid green;
+    align-items: center;
+}
+
+#test1 {
+    display: flex;
+    justify-content: center;
+}
+
+#avatar-wrap {
+    border: 1px solid blue;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+#avatar-wrap path {
+    fill: none;
+    stroke: url(#orange-to-pink);
+    stroke-width: 6;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+#half-circle {
+    border: 1px solid yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#avatar-wrap img {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 25px;
+    bottom: 26px;
+}
+/* FIN DE LA ZONE DE CHANTIER */
+
+header .container .col-md-7 h4 {
+    padding: 1vmin 0;
+    letter-spacing: 1.2px;
+}
+
+header .text-left i {
+    font-size: 2rem;
+    margin: 0.8rem 0;
+    margin-right: 1.5rem;
+    background-image: linear-gradient(135deg, #ff8a00, #e52e71 85%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+header .chevron-down i {
+    font-size: 2.5rem;
+    background-image: linear-gradient(#ff8a00, #e52e71 75%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: pulse 1.2s ease-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        margin-bottom: 2rem;
+        opacity: 1;
+    }
+    50% {
+        margin-top: 0.8rem;
+        margin-bottom: 1.2rem;
+        opacity: .5;
+        
+    }
+    100% {
+        margin-bottom: 2rem;
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    /********** Header **********/
+    header .navbar-brand {
+        padding-left: 1rem;
+        font-size: 1.4em;
+    }
+
+    header .nav-item {
+        padding: 0.5em;
+    }
+
+    header .nav-link {
+        font-size: 0.9em;
+    }
+
+    header .row {
+        margin-left: 1em;
+        padding: 10vmin 1vmin 28vmin;
+    }
+
+    header .row .col-md-7 h1 {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    header .row .col-md-7 h4 {
+        color: white;
+        font-size: 1.1rem;
+        margin-right: 1.3em;
+    }
+
+    header .row .col-md-5 {
+        padding-bottom: 10vmin;
+        text-align: center;
+    }
+
+}

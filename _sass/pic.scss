@@ -1,0 +1,99 @@
+.section-1 {
+    position: relative;
+    height: 105vh;
+    display: flex;
+    background: var(--background);
+}
+
+.section-1 .screen {
+    position: relative;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.section-1 .screen:nth-child(1) {
+    background: url(../img/first.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section-1 .screen:nth-child(2) {
+    background: url(../img/second.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section-1 .screen:nth-child(3) {
+    background: url(../img/third.jpg);
+    background-repeat: no-repeat;
+    background-position: center;  
+}
+
+.section-1 .screen:hover {
+    flex-grow: 4;
+    opacity: 1;
+}
+
+.section-1 .screen .content-sec {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    background: var(--background);
+    padding: 25px;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: 0.2s;
+    text-align: justify;
+}
+
+.section-1 .screen:hover .content-sec {
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
+
+.section-1 .screen .content-sec p {
+    color: whitesmoke;
+    font-family: var(--Rubik);
+    margin: 0;
+    padding: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .section-1 .screen .content-sec {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+
+    .section-1 .screen .content-sec p {
+        font-size: 0px;
+    }
+
+    .section-1 .screen:nth-child(1) {
+        background: url(../img/first.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 350%;
+    }
+
+    .section-1 .screen:nth-child(2) {
+        background: url(../img/second.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 350%;
+    }
+
+    .section-1 .screen:nth-child(3) {
+        background: url(../img/third.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 350%;
+    }
+
+}

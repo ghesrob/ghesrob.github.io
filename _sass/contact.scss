@@ -1,0 +1,122 @@
+.section-5 {
+    padding-top: 7vmin;
+    padding-bottom: 10vmin;
+    background-position: center;
+    background: var(--background);
+}
+
+.contact {
+    width: 30%;
+    padding: 4vmin;
+    padding-top: 2vmin;
+    margin-left: 30px;
+    background-color: #17141d;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px #00000080;
+    float: left;
+}
+
+.contact h2 {
+    color: #666;
+    text-align: center;
+    font-size: 20px;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.input-field input,
+.input-field textarea {
+    width: 100%;
+    padding: 5px 0;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #666;
+    font-size: 12px;
+    color: whitesmoke;
+    font-weight: 500;
+    resize: none;
+}
+
+.input-field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px 0;
+    pointer-events: none;
+    font-size: 12px;
+    color: #666;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.input-field input:focus+label,
+.input-field textarea:focus+label,
+.input-field input:valid+label,
+.input-field textarea:valid+label {
+    top: -25px;
+    font-size: 14px;
+    padding: 2px 5px;
+    background: #ff006a;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.section-5 .contact .btn {
+    margin-top: 10px;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    background-size: 200%;
+    background-image: var(--gradientbtn);
+    transition: 0.5s linear;
+}
+
+.section-5 .contact .btn:hover {
+    background-position: right;
+}
+
+.quote {
+    color: whitesmoke;
+    text-align: center;
+    padding-right: 2em;
+    padding-top: 9em;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .section-5 .contact {
+        width: 100%;
+        position: initial;
+        width: initial;
+        height: initial;
+        margin: 80px;
+        margin-top: 15px;
+    }
+
+    .section-5 .contact h2 {
+        font-size: 1.4em;
+    }
+
+    .section-5 .contact .btn {
+        font-size: 12px;
+    }
+
+    .quote {
+        padding: 2em;
+        padding-top: 30em;
+    }
+
+}

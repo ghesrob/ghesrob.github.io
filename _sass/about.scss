@@ -1,0 +1,84 @@
+.section-2 {
+    padding: 8vmin 0vmin;
+    background: var(--background)
+}
+
+.section-2 .row .col-md-6 .pray img {
+    width: 65%;
+    border-radius: 0.2em;
+}
+
+.section-2 .row .col-md-6:last-child {
+    position: relative;
+}
+
+.section-2 .row .col-md-6 .panel {
+    position: absolute;
+    top: 7vmin;
+    left: -25vmin;
+    background: #1f1c28;
+    /*background: #17141d;*/
+    border-radius: 3px;
+    text-align: left;
+    padding: 4vmin 4vmin 7vmin 5vmin;
+    box-shadow: 0 10px 30px #00000080;
+    font-family: var(--Rubik);
+    z-index: 1;
+}
+
+.section-2 .row .col-md-6 .panel h2 {
+    font-weight: bold;
+    padding: 0.4em 0;
+    color: whitesmoke;
+    font-size: 1.4em;
+}
+
+.section-2 .row .col-md-6 .panel h3 {
+    color: whitesmoke;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.section-2 .row .col-md-6 .panel h5 {
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+.section-2 .row .col-md-6 .panel p {
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+
+.section-2 .btn {
+    margin-top: 10px;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    background-size: 200%;
+    background-image: var(--gradientbtn);
+    transition: 0.5s linear;
+}
+
+.section-2 .btn:hover {
+    background-position: right;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .section-2 .row .col-md-6 .panel {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    .section-2 .row .col-md-6 .pray img {
+        margin-bottom: 3em;
+        margin-top: 1em;
+    }
+
+}
