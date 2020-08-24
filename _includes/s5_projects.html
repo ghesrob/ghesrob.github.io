@@ -1,4 +1,4 @@
-<section id="main-project" class="section-4">
+<section id="main-project">
 
     <h1 class="section-title">Personal projects</h1>
 
@@ -8,18 +8,22 @@
             {% for project in site.projects %}
                 <div class="card mr-2 d-inline-block" style="width: 18rem;">
                     <img src="assets/img/background-def.png" class="card-img-top" alt="...">
+
                     <div class="card-body">
                         <h4 class="card-title">{{ project.name }}</h4>
-                        <p class="card-text">{{ project.content | markdownify }}</p>
+                        <p class="card-text">
+                            {{ project.content | markdownify }}
+                        </p>
                         <div class="tags">
                             {% for tag in project.tags %}
                                 <div class="tag">{{ tag  }}</div>
                             {% endfor %}
                         </div>
+                        <a href="{{ project.link }}" class="card-link">
+                            Project link
+                        </a>
                     </div>
-                    <div class="card-body">
-                        <a href="{{ project.link }}" class="card-link">Project link</a>
-                    </div>
+
                 </div>
             {% endfor %}
 

@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet&display=swap');
+
+/* Font and color variables */
+$font-snigle: "sniglet", cursive;
+$font-rubik: "Rubik", cursive;
+$background: #100e17;
+$gradientl: linear-gradient(to left, #ff8a00, #e52e71 60%);
+$gradientr: linear-gradient(to right, #ff8a00, #e52e71 60%);
+$gradientbtn: linear-gradient(to left, #ff8a00 0%, #e52e71, #ff8a00 100%);
+
+/* Mixin for background image behind text */
+@mixin bgtxt($image) {
+    background-image: $image;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+/* Mixin for images in pictures section */
+@mixin bgimg($url) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-position: center;
+}

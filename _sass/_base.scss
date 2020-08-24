@@ -1,17 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet&display=swap');
+@use "utils";
 
-:root {
-    --Snigle-font: "sniglet", cursive;
-    --Rubik: "Rubik", cursive;
-    --background: #100e17;
-    --gradientl: linear-gradient(to left, #ff8a00, #e52e71 60%);
-    --gradientr: linear-gradient(to right, #ff8a00, #e52e71 60%);
-    --gradientbtn: linear-gradient(to left, #ff8a00, #e52e71, #ff8a00);
-}
+
+/* CSS */
 
 * {
     box-sizing: border-box;
-    font-family: var(--Rubik);
+    font-family: $font-rubik;
 }
 
 html {
@@ -26,7 +20,7 @@ body {
 
 /* Scrollbar */
 body::-webkit-scrollbar {
-    background-color: var(--background);
+    background-color: $background;
     border-left: 1px solid #252525;
 }
 
@@ -44,27 +38,27 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     position: relative;
     text-align: center;
-}
 
-.section-title::before {
-    position: absolute;
-    content: "";
-    width: 90px;
-    height: 3px;
-    background-image: var(--gradientr);
-    bottom: 0;
-    left: calc(50% - 45px);
-}
+    &::before {
+        position: absolute;
+        content: "";
+        width: 90px;
+        height: 3px;
+        background-image: $gradientr;
+        bottom: 0;
+        left: calc(50% - 45px);
+    }
 
-.section-title::after {
-    position: absolute;
-    content: "";
-    width: 24px;
-    height: 18px;
-    background-image: linear-gradient(135deg, #ff8a00, #e52e71);
-    border: 4px solid var(--background);
-    bottom: -8px;
-    left: calc(50% - 12px);
+    &::after {
+        position: absolute;
+        content: "";
+        width: 24px;
+        height: 18px;
+        background-image: linear-gradient(135deg, #ff8a00, #e52e71);
+        border: 4px solid $background;
+        bottom: -8px;
+        left: calc(50% - 12px);
+    }
 }
 
 
@@ -73,7 +67,7 @@ body::-webkit-scrollbar-thumb {
 -----------------------------------------------*/
 
 header{
-    background: var(--background);
+    background: $background;
     height: 100vh;
 }
 
@@ -82,7 +76,7 @@ header, section {
 }
 
 header a {
-    font-family: var(--Snigle-font);
+    font-family: $font-snigle;
     font-size: 0.9em;
     color: whitesmoke;
 }
@@ -99,7 +93,7 @@ header .p-0::after {
     content: "";
     width: 100%;
     height: 2px;
-    background-image: var(--gradientl);
+    background-image: $gradientl;
 }
 
 header .nav-item {
@@ -125,10 +119,7 @@ header .navbar-brand:hover {
 
 header .brand-wrap:hover,
 header .nav-link:hover {
-    background-image: var(--gradientr);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include bgtxt($gradientr);
 }
 
 
@@ -206,18 +197,12 @@ header .text-left i {
     font-size: 2rem;
     margin: 0.8rem 0;
     margin-right: 1.5rem;
-    background-image: linear-gradient(135deg, #ff8a00, #e52e71 85%);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include bgtxt(linear-gradient(135deg, #ff8a00, #e52e71 85%));
 }
 
 header .chevron-down i {
     font-size: 2.5rem;
-    background-image: linear-gradient(#ff8a00, #e52e71 75%);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+    @include bgtxt(linear-gradient(#ff8a00, #e52e71 75%));
     animation: pulse 1.2s ease-out infinite;
 }
 

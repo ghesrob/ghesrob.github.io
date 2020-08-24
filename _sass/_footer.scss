@@ -1,18 +1,20 @@
+@use "utils";
+
 footer {
     background: rgba(0, 0, 0, 0.815);
     overflow-x: hidden;
     padding: 7vmin 22vmin;
-}
 
-footer .sp {
-    background-image: var(--gradientr);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-}
+    .sp {
+        background-image: $gradientr;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
 
-footer input {
-    border: none !important;
+    input {
+        border: none !important;
+    }
 }
 
 footer input::placeholder {
@@ -20,7 +22,7 @@ footer input::placeholder {
 }
 
 footer .input-group .input-group-text {
-    background: var(--background);
+    background: $background;
     border: none;
 }
 

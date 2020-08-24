@@ -1,0 +1,88 @@
+@use "utils";
+
+#main-contact {
+    padding-top: 7vmin;
+    padding-bottom: 10vmin;
+    background: $background;
+}
+
+#main-contact .form-wrap {
+    padding: 4vmin;
+    padding-top: 2vmin;
+    background-color: #17141d;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px #00000080;
+}
+
+#main-contact .input-field {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+
+    input, textarea {
+        width: 100%;
+        padding: 5px 0;
+        box-sizing: border-box;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #666;
+        font-size: 12px;
+        color: whitesmoke;
+        font-weight: 500;
+        resize: none;
+    }
+
+    label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 3px 0;
+        pointer-events: none;
+        font-size: 12px;
+        color: #666;
+        font-weight: 700;
+        transition: 0.5s;
+    }
+
+
+}
+
+#main-contact .input-field input:focus+label,
+#main-contact .input-field textarea:focus+label,
+#main-contact .input-field input:valid+label,
+#main-contact .input-field textarea:valid+label {
+    top: -25px;
+    font-size: 14px;
+    padding: 2px 5px;
+    @include bgtxt($gradientr);
+}
+
+#main-contact .form-wrap .btn {
+    margin-top: 10px;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    background-size: 200%;
+    background-image: $gradientbtn;
+    transition: 0.5s linear;
+
+    &:hover { background-position: right; }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #main-contact .form-wrap {
+        margin: 80px 20px;
+    }
+
+    #main-contact .form-wrap .btn {
+        font-size: 12px;
+    }
+
+}

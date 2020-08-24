@@ -1,0 +1,84 @@
+@use "utils";
+
+#main-about {
+    padding: 8vmin 0vmin;
+    background: $background;
+}
+
+#main-about #about-img {
+    width: 65%;
+    border-radius: 0.2em;
+}
+
+#main-about .row .col-md-6:last-child {
+    position: relative;
+}
+
+#main-about .panel {
+    position: absolute;
+    top: 5vmin;
+    left: -25vmin;
+    background: #1f1c28;
+    /*background: #17141d;*/
+    border-radius: 3px;
+    text-align: left;
+    padding: 4vmin 4vmin 7vmin 5vmin;
+    box-shadow: 0 10px 30px #00000080;
+    font-family: $font-rubik;
+    z-index: 1;
+
+    h2 {
+        font-weight: bold;
+        padding: 0.4em 0;
+        color: whitesmoke;
+        font-size: 1.4em;
+    }
+
+    h3 {
+        color: whitesmoke;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    
+    h5 {
+        color: whitesmoke;
+        font-size: 1em;
+    }
+
+    p {
+        color: whitesmoke;
+        font-size: 0.8em;
+    }
+}
+
+#main-about .btn {
+    margin-top: 10px;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    background-size: 200%;
+    background-image: $gradientbtn;
+    transition: 0.5s linear;
+
+    &:hover { background-position: right; }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #main-about .panel {
+        position: initial;
+        width: initial;
+        height: initial;
+    }
+
+    #main-about #about-img {
+        margin-bottom: 3em;
+        margin-top: 1em;
+    }
+
+}
