@@ -1,29 +1,17 @@
 @use "utils";
 
 footer {
-    background: rgba(0, 0, 0, 0.815);
+    background-color: #1f1c28;
     overflow-x: hidden;
-    padding: 7vmin 22vmin;
+    padding: 2vmin 22vmin;
 
-    .sp {
+    .name {
         background-image: $gradientr;
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
     }
 
-    input {
-        border: none !important;
-    }
-}
-
-footer input::placeholder {
-    color: white !important;
-}
-
-footer .input-group .input-group-text {
-    background: $background;
-    border: none;
 }
 
 footer .column i {
@@ -35,21 +23,13 @@ footer .column i+i {
     padding: 0 0.5em;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 3em;
-    background: rgba(0, 0, 0, 0.500);
-    z-index: 9999;
-    transition: all 1.5s ease;
-}
 
-footer .col-md-2:nth-child(3) {
+footer .col-md-2 {
+    padding-top: 3vmin;
     text-align: right;
 }
 
-footer .col-md-2:nth-child(3) i{
+footer .col-md-2 i{
     font-size: 2rem;
     margin: 0.8rem 0;
     margin-right: 1.5rem;
@@ -62,16 +42,12 @@ footer .col-md-2:nth-child(3) i{
 
 @media only screen and (max-width: 768px) {
 
-    footer .row .col-md-2 {
-        margin-top: 8vmin;
-    }
-
     footer {
-        padding: 7vmin 15vmin;
+        padding: 2vmin 5vmin;
     }
 
-    .sticky {
-        position: absolute;
+    footer .row .col-md-2 {
+        text-align: center;
     }
-    
+
 }

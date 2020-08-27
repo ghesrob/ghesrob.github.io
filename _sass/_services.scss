@@ -3,3 +3,51 @@
 #main-services {
     background: $background;
 }
+
+
+#main-services .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#main-services .service {
+    margin: 30px 0;
+    padding: 40px 20px;
+    width: calc(50% - 30px);
+    text-align: center;
+    background-color: #17141d;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #fff;
+    position: relative;
+
+
+    &::before {
+        position: absolute;
+        padding: 4px 15px;
+        content: "Artificial Intelligence";
+        background-image: $gradientr;
+        border-radius: 3px;
+        left: 5%;
+        top: -7%;
+
+    }
+}
+
+#main-services .service i {
+    font-size: 2rem;
+    margin-bottom: 3vmin;
+    @include bgtxt($gradientdiag);
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    #main-services .service {
+        width: 100%;
+    }
+    
+}

@@ -8,6 +8,7 @@ $background: #100e17;
 $gradientl: linear-gradient(to left, #ff8a00, #e52e71 60%);
 $gradientr: linear-gradient(to right, #ff8a00, #e52e71 60%);
 $gradientbtn: linear-gradient(to left, #ff8a00 0%, #e52e71, #ff8a00 100%);
+$gradientdiag: linear-gradient(135deg, #ff8a00, #e52e71 85%);
 
 /* Mixin for background image behind text */
 @mixin bgtxt($image) {
